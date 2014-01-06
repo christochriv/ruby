@@ -1,9 +1,5 @@
 // Copy your irb shell history below !
 
-irb(main):001:0> my_name = Chris
-NameError: uninitialized constant Chris
-	from (irb):1
-	from /usr/bin/irb:12:in `<main>'
 irb(main):002:0> my_name = "Chris"
 => "Chris"
 irb(main):003:0> def say_hi_to(my_name)
@@ -13,3 +9,5 @@ irb(main):005:1> end
 irb(main):006:0> say_hi_to(my_name)
 Bonjour Chris ! Comment ca roule ?
 => nil
+
+FIN DE LA SOLUTION
