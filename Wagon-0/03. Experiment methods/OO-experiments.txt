@@ -1,2 +1,20 @@
 // Copy some experiments you made on ruby String and Fixnum objects below !
 // You choose pick 3 methods for String and 3 methods for Fixnum
+
+irb(main):023:0> "Je suis une saucisse !".reverse
+=> "! essicuas enu sius eJ"
+
+irb(main):027:0> "je suis une saucisse geante".capitalize!
+=> "Je suis une saucisse geante"
+
+irb(main):029:0> "C'est un fameux trois mats ...".swapcase!
+=> "c'EST UN FAMEUX TROIS MATS ..."
+
+irb(main):030:0> 23 ** 42
+=> 1558005952997140033806173725098810522409738596181909282129
+
+irb(main):038:0> 962942.odd?
+=> false
+
+irb(main):039:0> 13 == 123
+=> false
