@@ -49,8 +49,8 @@ puts player.status_Player == :play # true
 player.cheat
 puts player.has_won == true
   
-=begin
+begin
   PlayerMoving.new(110)
 rescue RuntimeError => e
   puts e.to_s == "Position must be between 1 and 100" # true
-=end
+end
