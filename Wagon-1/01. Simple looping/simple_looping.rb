@@ -1,12 +1,43 @@
-# The objective is to create a function that computes the sum of the integers from a min value to a max value
+# Methode While
+def sum(min, max)
+	result = 1
 
-def sum(min,max)
-  # your code here
+	while min < max
+  	min += 1
+		result += min  
+	end
+
+	result
 end
 
-# Testing your code
+# Methode For
+def sum2(min, max)
+	x = 0
+	for number in min..max
+		x += number
+	end	
+	x
+end
 
-min = 1
-max = 100
-sum = sum(1,100)
-puts sum == 5050 # => true
+
+min_ex = 1
+max_ex = 100
+sum = sum(min_ex,max_ex) 
+
+puts sum
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

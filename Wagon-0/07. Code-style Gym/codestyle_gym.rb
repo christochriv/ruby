@@ -13,14 +13,14 @@ class PlayerMoving
     
   def play
     if self.status_player == :play 
-      rand(1..100) < 50
+      if rand(1..100) < 50
       move(rand(1..10))
-    else
+      else
       move(-rand(1..10))
     end  
   end
 
-  def cheat(@position) 
+  def cheat
     @position = 101 
   end
     
@@ -34,7 +34,7 @@ class PlayerMoving
     end
   end
     
-  def has_won(status_player)
+  def has_won
     status_player == true
     :win
   end
@@ -43,7 +43,7 @@ end
 
 player = PlayerMoving.new(50)
 #PlayerMoving.move # the move method is called on the CLASS
-player.move # the move method is called on the INSTANCE OF THE CLASS
+#player.move # the move method is called on the INSTANCE OF THE CLASS
 player.play
 puts player.status_Player == :play # true
 player.cheat
