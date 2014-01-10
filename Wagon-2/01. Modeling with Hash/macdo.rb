@@ -1,9 +1,31 @@
+# Hash
+def test(nom_du_sandwich, nom_accompagnement, nom_boisson)
+	food = { 
+					"Cheese Burger" => 290,
+					"Big Mac" => 300,
+					"Mc Bacon" => 400,
+					"Royal Cheese" => 130,
+					"Filet-of-Fish" => 190,
+					"French fries" => 130,
+					"Potatoes" => 130,
+					"Coca" => 160,
+					"Sprite" => 170
+					}
+					
+	puts food[nom_du_sandwich].to_s + " calories dans " + nom_du_sandwich
+	puts food[nom_accompagnement].to_s + " calories dans " + nom_accompagnement
+	puts food[nom_boisson].to_s + " calories dans " + nom_boisson
+end
+
+
+#Array
 def calories(nom_du_sandwich, nom_accompagnement, nom_boisson)
 	burger = [
 		["Cheese Burger", 290],
 		["Big Mac", 300],
 		["Mc Bacon", 400],
-		["Royal Cheese", 130]
+		["Royal Cheese", 130],
+		["Filet-o-Fish", 190]
 					]
 
 	side = [
@@ -26,3 +48,4 @@ end
 
 # Test Array
 calories("Royal Cheese", "Potatoes", "Coca")
+test("Royal Cheese", "Potatoes", "Coca")
