@@ -12,9 +12,9 @@ def test(nom_du_sandwich, nom_accompagnement, nom_boisson)
 					"Sprite" => 170
 					}
 					
-	puts food[nom_du_sandwich].to_s + " calories dans " + nom_du_sandwich
-	puts food[nom_accompagnement].to_s + " calories dans " + nom_accompagnement
-	puts food[nom_boisson].to_s + " calories dans " + nom_boisson
+	food[nom_du_sandwich].to_s + " calories dans " + nom_du_sandwich
+	food[nom_accompagnement].to_s + " calories dans " + nom_accompagnement
+	food[nom_boisson].to_s + " calories dans " + nom_boisson
 end
 
 

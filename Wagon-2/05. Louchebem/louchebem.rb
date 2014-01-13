@@ -8,14 +8,21 @@ def louchebem(word)
 	end
 end
 
-def sentence_louchebem(phrases)
-phrases.split('').each { |mot| print louchebem(phrases), " " }
-return
+def sentence_louchebem(phrase)
+	phrase.split.each.each do |mot|
+		 print louchebem(mot) + " "
+		end
 end
 
 
 
 
 
-puts louchebem("tarte")
-puts sentence_louchebem("Je mange une tarte aux Pommes")
+
+
+
+
+
+
+puts louchebem("Je")
+sentence_louchebem("Je mange une tarte aux Pommes")
