@@ -1,7 +1,6 @@
 def cookbook
 
 	require 'csv'
-
 	array_of_recipes = CSV.read("recipes.csv")
 
 	#Categories 
@@ -43,17 +42,24 @@ def cookbook
 	puts "Now which recipe do you want ?"
 	chosen_one = gets.chomp
 
+	# Difficulty
+	difficulty = { 
+	"1" => "Easy", 
+	"2" => "Medium",
+	"3" => "Hard"
+					}
+
 	array_of_recipes.each do |x|
 			case true
 				when x[0] == chosen_one
-					difficulty = x[4]
+			
 					preparation = x[2]
 					cooking = x[3]
 
 						puts " "
 						puts chosen_one + " !" + " What a marvelous idea."
 						puts "************************************"
-						puts "difficulty : #{difficulty}"
+						puts "difficulty : " + difficulty[x[4]]
 						puts "preparation : #{preparation} min"
 						puts "cooking : #{cooking}h"
 						puts "************************************"
