@@ -13,14 +13,21 @@ def cookbook
 	puts "Which category are you interested in ?"
 	answer = gets.chomp
 
-		if categories.include?(answer)
-		puts " "
-		puts "Ok ! For the category #{answer}, we have : " 
-		
-		else
-		puts " "
-		puts "Sorry Sir. We do not have any recipes for this category (have you been careful with the case ?)."
-		puts "Choose another one."
+		valid = false
+
+		while true 
+			if categories.include?(answer)
+			puts " "
+			puts "Ok ! For the category #{answer}, we have : " 
+			valid = true
+			break
+			
+			else
+			puts " "
+			puts "Sorry Sir. We do not have any recipes for this category (have you been careful with the case ?)."
+			puts "Choose something else."
+			answer = gets.chomp
+			end
 		end
 
 	# Available recipes
@@ -38,21 +45,20 @@ def cookbook
 
 	array_of_recipes.each do |x|
 			case true
-			when x[0] == chosen_one
-				difficulty = x[4]
-				preparation = x[2]
-				cooking = x[3]
+				when x[0] == chosen_one
+					difficulty = x[4]
+					preparation = x[2]
+					cooking = x[3]
 
-					puts " "
-					puts chosen_one + " !" + " What a marvelous idea."
-					puts "************************************"
-					puts "difficulty : #{difficulty}"
-					puts "preparation : #{preparation} min"
-					puts "cooking : #{cooking}h"
-					puts "************************************"
-
-			else
-			end
+						puts " "
+						puts chosen_one + " !" + " What a marvelous idea."
+						puts "************************************"
+						puts "difficulty : #{difficulty}"
+						puts "preparation : #{preparation} min"
+						puts "cooking : #{cooking}h"
+						puts "************************************"
+				else
+				end
 		end
 end
 
